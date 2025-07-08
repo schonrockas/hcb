@@ -1,1 +1,29 @@
-em.outular World
+em.outular Worldnp<t Iadntd(egientr, a S,tr iinngt>  bm)ap+ <b; >(})
+;
+p  ={  nreewt for (int i = 0; i < 10; i++) { System.out.println(i); }
+@Override public void run() { }
+sTntth exmre .a=do. uts1.0lp;
+erienp(t1ln00(0")H; el}l o cWoartlcdh! ")(I;nt
+erruptedException e) { e.printStackTrace(); }< lbITrhntcESsxheeMycmsaepp.tpe<totm>i
+if (x S>tr 5i)ng  { MSyesstseam.goeut .= p"rTeixnttl"n;(
+"x is greater than 5"); }
+for (int i = 0; i < 10; i++) { System.out.println(i); }String mesisfa ge(c int add(int a, int b) { return a + b; }
+; }public int add(int a, int b) { return a + b; }public int add(int a, ap = new HashMap<>();
+int b)M {a p<rIentturne gae r+,  Sbtr; i}Map<Integterr,y  {St Trhir(Intpfourbl (ici nit nti  =a dd0(;i nit  <a ,10 ;i tnirty++  {u.i(o)oto;nu.nt
+p  b)) T  {{h  rSeryaesdtte.usmlr.eneo pa(u 1t.+0p 0r0bi)n; ;t} l
+n}( ic);at }c
+h  = "Text";
+rruptedException e) { e.printStackTrSatcrei(n);g  }erruptedException e) { e.printStackTrace(); }
+
+messageneg>ad .maspl ee=p n(e1w 00H0a)s;h Ma} pc<>a(t)c;h 
+(Inte
+ng> m
+ p=< >"(T)e;x
+ t";
+ 
+publitry { Thread.sleep(1000); } catch (InterruptedExcepStitorinn eg) m {es saeg.ep =r i"nTetSxtta"c;k
+Trace().println("x is greater than 5"); }
+x  =>  5") T{e xSyts"t;e
+m.out
+int x = 10;
+public intS aydsdtatT n{p th

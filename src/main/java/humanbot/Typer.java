@@ -12,41 +12,45 @@ public class Typer {
     }
 
     public void type(String text) {
-        for (char c : text.toCharArray()) {
-            if (Character.isUpperCase(c)) {
-                robot.keyPress(KeyEvent.VK_SHIFT);
-                robot.keyPress(Character.toUpperCase(c));
-                robot.keyRelease(Character.toUpperCase(c));
-                robot.keyRelease(KeyEvent.VK_SHIFT);
-            } else {
-                switch (c) {
-                    case '(': pressShiftKey(KeyEvent.VK_9); break;
-                    case ')': pressShiftKey(KeyEvent.VK_0); break;
-                    case '{': pressShiftKey(KeyEvent.VK_OPEN_BRACKET); break;
-                    case '}': pressShiftKey(KeyEvent.VK_CLOSE_BRACKET); break;
-                    case '"': pressShiftKey(KeyEvent.VK_QUOTE); break;
-                    case '!': pressShiftKey(KeyEvent.VK_1); break;
-                    case '+': pressShiftKey(KeyEvent.VK_EQUALS); break;
-                    case '<': pressShiftKey(KeyEvent.VK_COMMA); break;
-                    case '>': pressShiftKey(KeyEvent.VK_PERIOD); break;
-                    case '@': pressShiftKey(KeyEvent.VK_2); break;
-                    case '*': pressShiftKey(KeyEvent.VK_8); break;
-                    case ':': pressShiftKey(KeyEvent.VK_SEMICOLON); break;
-                    case ';': pressKey(KeyEvent.VK_SEMICOLON); break;
-                    case '.': pressKey(KeyEvent.VK_PERIOD); break;
-                    case ',': pressKey(KeyEvent.VK_COMMA); break;
-                    case ' ': pressKey(KeyEvent.VK_SPACE); break;
-                    case '\n': pressKey(KeyEvent.VK_ENTER); break;
-                    default:
-                        int keyCode = KeyEvent.getExtendedKeyCodeForChar(c);
-                        if (keyCode != KeyEvent.CHAR_UNDEFINED) {
-                            pressKey(keyCode);
-                        }
-                }
-            }
-            sleep(50, 200);
-        }
-        pressKey(KeyEvent.VK_ENTER);
+    	try {
+	        for (char c : text.toCharArray()) {
+	            if (Character.isUpperCase(c)) {
+	                robot.keyPress(KeyEvent.VK_SHIFT);
+	                robot.keyPress(Character.toUpperCase(c));
+	                robot.keyRelease(Character.toUpperCase(c));
+	                robot.keyRelease(KeyEvent.VK_SHIFT);
+	            } else {
+	                switch (c) {
+	                    case '(': pressShiftKey(KeyEvent.VK_9); break;
+	                    case ')': pressShiftKey(KeyEvent.VK_0); break;
+	                    case '{': pressShiftKey(KeyEvent.VK_OPEN_BRACKET); break;
+	                    case '}': pressShiftKey(KeyEvent.VK_CLOSE_BRACKET); break;
+	                    case '"': pressShiftKey(KeyEvent.VK_QUOTE); break;
+	                    case '!': pressShiftKey(KeyEvent.VK_1); break;
+	                    case '+': pressShiftKey(KeyEvent.VK_EQUALS); break;
+	                    case '<': pressShiftKey(KeyEvent.VK_COMMA); break;
+	                    case '>': pressShiftKey(KeyEvent.VK_PERIOD); break;
+	                    case '@': pressShiftKey(KeyEvent.VK_2); break;
+	                    case '*': pressShiftKey(KeyEvent.VK_8); break;
+	                    case ':': pressShiftKey(KeyEvent.VK_SEMICOLON); break;
+	                    case ';': pressKey(KeyEvent.VK_SEMICOLON); break;
+	                    case '.': pressKey(KeyEvent.VK_PERIOD); break;
+	                    case ',': pressKey(KeyEvent.VK_COMMA); break;
+	                    case ' ': pressKey(KeyEvent.VK_SPACE); break;
+	                    case '\n': pressKey(KeyEvent.VK_ENTER); break;
+	                    default:
+	                        int keyCode = KeyEvent.getExtendedKeyCodeForChar(c);
+	                        if (keyCode != KeyEvent.CHAR_UNDEFINED) {
+	                            pressKey(keyCode);
+	                        }
+	                }
+	            }
+	            sleep(50, 200);
+	        }
+	        pressKey(KeyEvent.VK_ENTER);
+    	} catch (Exception e) {
+    		System.out.println("error");
+    	}
     }
 
     private void pressShiftKey(int key) {
