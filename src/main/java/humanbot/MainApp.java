@@ -97,7 +97,7 @@ public class MainApp {
     private static void typeSnippet(String text) {
         for (char c : text.toCharArray()) {
             int keyCode = KeyEvent.getExtendedKeyCodeForChar(c);
-            if (KeyEvent.CHAR_UNDEFINED == keyCode) {
+            if (keyCode == KeyEvent.VK_UNDEFINED) {
                 continue;
             }
             robot.keyPress(keyCode);
