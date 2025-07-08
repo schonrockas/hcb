@@ -6,12 +6,13 @@ import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import humanbot.Typer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -26,10 +27,12 @@ public class MainApp {
     private static boolean running = false;
     private static List<String> snippets = new ArrayList<>();
     private static Robot robot;
+    private static Typer typer;
     private static Random random = new Random();
 
     public static void main(String[] args) throws Exception {
         robot = new Robot();
+        typer = new Typer();
         loadSnippets();
 
         JFrame frame = new JFrame("Human Coder Bot");
@@ -94,25 +97,12 @@ public class MainApp {
     private static void runBot() {
         while (running) {
             String snippet = snippets.get(random.nextInt(snippets.size()));
-            typeSnippet(snippet);
+            typer.type(snippet);
             moveMouseRandom();
             sleepRandom(10000, 30000);
         }
     }
 
-    private static void typeSnippet(String text) {
-        for (char c : text.toCharArray()) {
-            int keyCode = KeyEvent.getExtendedKeyCodeForChar(c);
-            if (keyCode == KeyEvent.VK_UNDEFINED) {
-                continue;
-            }
-            robot.keyPress(keyCode);
-            robot.keyRelease(keyCode);
-            sleepRandom(50, 200);
-        }
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.keyRelease(KeyEvent.VK_ENTER);
-    }
 
     private static void moveMouseRandom() {
         Point mousePoint = MouseInfo.getPointerInfo().getLocation();
