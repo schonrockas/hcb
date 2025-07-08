@@ -25,8 +25,16 @@ public class Typer {
                     case '{': pressShiftKey(KeyEvent.VK_OPEN_BRACKET); break;
                     case '}': pressShiftKey(KeyEvent.VK_CLOSE_BRACKET); break;
                     case '"': pressShiftKey(KeyEvent.VK_QUOTE); break;
+                    case '!': pressShiftKey(KeyEvent.VK_1); break;
+                    case '+': pressShiftKey(KeyEvent.VK_EQUALS); break;
+                    case '<': pressShiftKey(KeyEvent.VK_COMMA); break;
+                    case '>': pressShiftKey(KeyEvent.VK_PERIOD); break;
+                    case '@': pressShiftKey(KeyEvent.VK_2); break;
+                    case '*': pressShiftKey(KeyEvent.VK_8); break;
+                    case ':': pressShiftKey(KeyEvent.VK_SEMICOLON); break;
                     case ';': pressKey(KeyEvent.VK_SEMICOLON); break;
                     case '.': pressKey(KeyEvent.VK_PERIOD); break;
+                    case ',': pressKey(KeyEvent.VK_COMMA); break;
                     case ' ': pressKey(KeyEvent.VK_SPACE); break;
                     case '\n': pressKey(KeyEvent.VK_ENTER); break;
                     default:
