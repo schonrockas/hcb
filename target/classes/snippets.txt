@@ -1,0 +1,12 @@
+System.out.println("Hello World!");
+int x = 10;
+for (int i = 0; i < 10; i++) { System.out.println(i); }
+if (x > 5) { System.out.println("x is greater than 5"); }
+try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); }
+List<String> names = new ArrayList<>();
+Map<Integer, String> map = new HashMap<>();
+@Override public void run() { }
+public int add(int a, int b) { return a + b; }
+// TODO: Refactor this
+/* Multi-line comment */
+String message = "Text";
